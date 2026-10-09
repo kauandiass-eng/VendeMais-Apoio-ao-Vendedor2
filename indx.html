@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>VendeMais — Apoio ao Vendedor</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- MENU LATERAL -->
+    <aside class="sidebar">
+
+        <div class="logo">
+            Vende<span>Mais</span>
+        </div>
+
+        <nav class="menu">
+
+            <button class="active" data-section="inicio">
+                 <h1>Início</h1>
+            </button>
+
+            <button data-section="produtos">
+                <h1>produtos</h1> 
+            </button>
+
+
+            <button data-section="orcamento">
+                <h1>Orçamento</h1>
+            </button>
+
+            <button data-section="objecoes">
+                 <h1> Objeções</h1>
+            </button>
+
+            <button data-section="clientes">
+               <h1> Pós-atendimento</h1>
+            </button>
+
+            <button data-section="treinamento">
+                 <h1>Treinamento</h1>
+            </button>
+
+
+        </nav>
+
+    </aside>
+
+
+    <!-- CONTEÚDO -->
+    <main class="main">
+
+
+        <!-- INÍCIO -->
+        <section id="inicio" class="section active">
+
+            <div class="top">
+
+                <div>
+                    <h1>Apoio ao vendedor</h1>
+
+                    <p class="muted">
+                        Tudo o que você precisa para atender melhor e mais rápido.
+                    </p>
+                </div>
+
+                <div class="badge">
+                    ● Sistema online
+                </div>
+
+            </div>
+
+
+            <div class="grid">
+
+                <div class="card">
+                    <div class="muted">
+                        Orçamentos hoje
+                    </div>
+
+                    <div class="stat">
+                        18
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="muted">
+                        Clientes em acompanhamento
+                    </div>
+
+                    <div class="stat">
+                        12
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="muted">
+                        Tempo médio de consulta
+                    </div>
+
+                    <div class="stat">
+                        32s
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <div class="muted">
+                        Conversão estimada
+                    </div>
+
+                    <div class="stat">
+                        +10%
+                    </div>
+                </div>
+
+            </div>
+
+
+            <div class="content">
+
+                <div class="panel">
+
+                    <h2>
+                        Pesquisa rápida
+                    </h2>
+
+                    <div class="search">
+
+                        <input
+                            id="homeSearch"
+                            placeholder="Digite produto, modelo ou categoria..."
+                        >
+
+                        <button
+                            class="btn"
+                            id="homeSearchBtn"
+                        >
+                            Pesquisar
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="homeResults"
+                        class="products"
+                    ></div>
+
+                </div>
+
+
+                <div class="panel">
+
+                    <h2>
+                        Acesso rápido
+                    </h2>
+
+                    <div class="quick">
+
+                        <button data-go="orcamento">
+                            🧾
+                            <br>
+                            <b>Criar orçamento</b>
+                            <br>
+                            <span class="muted">
+                                Monte em poucos passos
+                            </span>
+                        </button>
+
+
+                        <button data-go="objecoes">
+                            💬
+                            <br>
+                            <b>Tratar objeção</b>
+                            <br>
+                            <span class="muted">
+                                Veja sugestões de resposta
+                            </span>
+                        </button>
+
+
+                        <button data-go="clientes">
+                            👥
+                            <br>
+                            <b>Acompanhar cliente</b>
+                            <br>
+                            <span class="muted">
+                                Não perca oportunidades
+                            </span>
+                        </button>
+
+
+                        <button data-go="treinamento">
+                            🎓
+                            <br>
+                            <b>Treinar atendimento</b>
+                            <br>
+                            <span class="muted">
+                                Pratique situações reais
+                            </span>
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PRODUTOS -->
+        <section id="produtos" class="section">
+
+            <div class="top">
+
+                <div>
+
+                    <h1>
+                        Consulta de produtos
+                    </h1>
+
+                    <p class="muted">
+                        Preço, estoque e informações em um só lugar.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="search">
+
+                    <input
+                        id="productSearch"
+                        placeholder="Ex.: Geladeira Brastemp 400L"
+                    >
+
+                    <button
+                        class="btn"
+                        id="productSearchBtn"
+                    >
+                        Pesquisar
+                    </button>
+
+                </div>
+
+
+                <div
+                    id="productResults"
+                    class="products"
+                ></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ORÇAMENTO -->
+        <section id="orcamento" class="section">
+
+            <div class="top">
+
+                <div>
+
+                    <h1>
+                        Criação de orçamento
+                    </h1>
+
+                    <p class="muted">
+                        Monte o orçamento com menos tempo e menos erros.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="search">
+
+                    <input
+                        id="quoteProduct"
+                        placeholder="Digite o produto"
+                    >
+
+                    <input
+                        id="quoteQty"
+                        type="number"
+                        value="1"
+                        min="1"
+                        class="qty"
+                    >
+
+                    <button
+                        class="btn"
+                        id="addQuoteBtn"
+                    >
+                        Adicionar
+                    </button>
+
+                </div>
+
+
+                <div id="quoteList"></div>
+
+
+                <div class="quote-row">
+
+                    <b>
+                        Total
+                    </b>
+
+                    <b id="total">
+                        R$ 0,00
+                    </b>
+
+                </div>
+
+
+                <br>
+
+
+                <button
+                    class="btn"
+                    id="finishQuoteBtn"
+                >
+                    Finalizar orçamento
+                </button>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- OBJEÇÕES -->
+        <section id="objecoes" class="section">
+
+            <div class="top">
+
+                <div>
+
+                    <h1>
+                        Tratamento de objeções
+                    </h1>
+
+                    <p class="muted">
+                        Escolha a situação e veja uma sugestão de abordagem.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <div class="objection-buttons">
+
+                    <button
+                        class="btn secondary objection-btn"
+                        data-type="preco"
+                    >
+                        “Está caro”
+                    </button>
+
+
+                    <button
+                        class="btn secondary objection-btn"
+                        data-type="pesquisa"
+                    >
+                        “Vou pesquisar”
+                    </button>
+
+
+                    <button
+                        class="btn secondary objection-btn"
+                        data-type="dinheiro"
+                    >
+                        “Meu orçamento é limitado”
+                    </button>
+
+                </div>
+
+
+                <div id="objectionAnswer"></div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- PÓS-ATENDIMENTO -->
+        <section id="clientes" class="section">
+
+            <div class="top">
+
+                <div>
+
+                    <h1>
+                        Pós-atendimento
+                    </h1>
+
+                    <p class="muted">
+                        Acompanhe clientes que ainda não fecharam a compra.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+                
+<!-- CADASTRAR CLIENTE E ENVIAR MENSAGEM -->
+
+<div class="panel">
+    <h2>Novo contato</h2>
+
+    <div class="search">
+        <input
+            id="novoNome"
+            type="text"
+            placeholder="Nome do cliente"
+        >
+    </div>
+
+    <div class="search">
+        <input
+            id="novoTelefone"
+            type="tel"
+            placeholder="WhatsApp com DDD"
+        >
+    </div>
+
+    <div class="search">
+        <input
+            id="novoProduto"
+            type="text"
+            placeholder="Produto de interesse"
+        >
+    </div>
+
+    <button class="btn" id="enviarNovoCliente">
+        Abrir WhatsApp
+    </button>
+</div>
+
+
+             
+
+
+
+                
+
+            </div>
+
+        </section>
+
+                <section id="carros" class="section">
+                    <div class="top">
+
+                    </div>
+                    <h1>
+                        carros
+                    </h1>
+                    <p class="muted">carros são a solucoes
+
+                    </p>
+                    <img src="image.png" alt="carros">
+                </section>
+
+        <!-- TREINAMENTO -->
+        <section id="treinamento" class="section">
+
+            <div class="top">
+
+                <div>
+
+                    <h1>
+                        Treinamento e simulações
+                    </h1>
+
+                    <p class="muted">
+                        Pratique situações de atendimento antes de falar com o cliente.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="panel">
+
+                <h2>
+                    Simulação: cliente acha o produto caro
+                </h2>
+
+                <p class="muted">
+                    Como você responderia?
+                </p>
+
+                <br>
+
+
+                <textarea
+                    id="answer"
+                    placeholder="Digite sua resposta..."
+                ></textarea>
+
+
+                <br>
+                <br>
+
+
+                <button
+                    class="btn"
+                    id="sendAnswerBtn"
+                >
+                    Enviar resposta
+                </button>
+
+            </div>
+
+        </section>
+
+    </main>
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
